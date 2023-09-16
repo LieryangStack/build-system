@@ -1,0 +1,3 @@
+/home/lieryang/Desktop/build-system/02_demo/CMakeFiles/edit_cache.dir
+/home/lieryang/Desktop/build-system/02_demo/CMakeFiles/rebuild_cache.dir
+/home/lieryang/Desktop/build-system/02_demo/CMakeFiles/Demo2.dir

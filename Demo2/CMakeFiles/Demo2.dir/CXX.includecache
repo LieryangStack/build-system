@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lieryang/Desktop/build-system/02_demo/MathFunctions.cpp
+
+/home/lieryang/Desktop/build-system/02_demo/MathFunctions.h
+
+/home/lieryang/Desktop/build-system/02_demo/main.cpp
+stdio.h
+-
+stdlib.h
+-
+MathFunctions.h
+/home/lieryang/Desktop/build-system/02_demo/MathFunctions.h
+
