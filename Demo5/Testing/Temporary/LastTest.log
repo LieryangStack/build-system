@@ -1,0 +1,55 @@
+Start testing: Sep 18 10:15 CST
+----------------------------------------------------------
+1/3 Testing: test_run
+1/3 Test: test_run
+Command: "/home/lieryang/Desktop/build-system/Demo5/demo5" "5" "2"
+Directory: /home/lieryang/Desktop/build-system/Demo5
+"test_run" start time: Sep 18 10:15 CST
+Output:
+----------------------------------------------------------
+Now we use our own Math library. 
+5 ^ 2 is 25
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"test_run" end time: Sep 18 10:15 CST
+"test_run" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/3 Testing: test_usage
+2/3 Test: test_usage
+Command: "/home/lieryang/Desktop/build-system/Demo5/demo5"
+Directory: /home/lieryang/Desktop/build-system/Demo5
+"test_usage" start time: Sep 18 10:15 CST
+Output:
+----------------------------------------------------------
+Usage: /home/lieryang/Desktop/build-system/Demo5/demo5 base exponent 
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found. Regex=[Usage: .* base exponent]
+"test_usage" end time: Sep 18 10:15 CST
+"test_usage" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/3 Testing: test_5_2
+3/3 Test: test_5_2
+Command: "/home/lieryang/Desktop/build-system/Demo5/demo5" "5" "2"
+Directory: /home/lieryang/Desktop/build-system/Demo5
+"test_5_2" start time: Sep 18 10:15 CST
+Output:
+----------------------------------------------------------
+Now we use our own Math library. 
+5 ^ 2 is 25
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found. Regex=[is 25]
+"test_5_2" end time: Sep 18 10:15 CST
+"test_5_2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 18 10:15 CST

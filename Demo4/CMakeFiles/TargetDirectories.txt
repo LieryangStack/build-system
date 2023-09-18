@@ -1,0 +1,6 @@
+/home/lieryang/Desktop/build-system/Demo4/CMakeFiles/rebuild_cache.dir
+/home/lieryang/Desktop/build-system/Demo4/CMakeFiles/edit_cache.dir
+/home/lieryang/Desktop/build-system/Demo4/CMakeFiles/demo4.dir
+/home/lieryang/Desktop/build-system/Demo4/math/CMakeFiles/rebuild_cache.dir
+/home/lieryang/Desktop/build-system/Demo4/math/CMakeFiles/edit_cache.dir
+/home/lieryang/Desktop/build-system/Demo4/math/CMakeFiles/MathFunctions.dir
