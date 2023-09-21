@@ -8,6 +8,13 @@
 #         $^所有的依赖文件  $@所有的目标文件 $<所有的依赖文件的第一个文件
 # 第五层:
 
+
+# Default target executed when no arguments are given to make.
+default_target: all
+
+.PHONY : default_target
+
+
 TARGET := test
 
 CC := gcc
@@ -22,22 +29,9 @@ OBJS:= $(SRCS:%.c=%.o)
 
 INC = -I/home/lieryang/Desktop/makefile-study/2.mutli-file/
 
-#=============================================================================
-# Special targets provided by cmake.
-
-# Disable implicit rules so canonical targets will work.
-.SUFFIXES:
-
-
-# Remove some rules from gmake that .SUFFIXES does not remove.
-
-
-.SUFFIXES:
-.SUFFIXES: .hpux_make_needs_suffix_list
-
+all : $(TARGET)
 
 $(TARGET):$(OBJS)
-	@echo "test" $(SUFFIXES)
 	$(CC) $^ -o $@
 # 多个文件同时编译的时候不能即用 -o 又用 -c
 %.o:%.c
@@ -46,8 +40,10 @@ $(TARGET):$(OBJS)
 	@echo $(OBJS)
 	$(CC) -c $^ -o $@ $(INC)
 	@echo "编译结束"
+
+.PHONY : all
+
+
 .PHONY: clean
 clean:
 	rm -rf $(TARGET) $(OBJS)
-
-
