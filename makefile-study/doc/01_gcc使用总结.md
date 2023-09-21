@@ -28,7 +28,7 @@ gcc test.o -o test      # 链接
  <span style="background-color: lightcoral; font-size: 20px;">编译过程只会**检查**变量或者函数有没有声明，**不会检查**变量或者函数是否定义
  </span>
 
- <span style="background-color: lightcoral; font-size: 20px;">编译检查的是函数的声明，链接检查的是函数的定义
+ <span style="background-color: lightcoral; font-size: 20px;">**编译检查**的是函数的声明，**链接检查**的是函数的定义
  </span>
 
 ```c
