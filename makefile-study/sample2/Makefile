@@ -8,7 +8,12 @@
 #         $^所有的依赖文件  $@所有的目标文件 $<所有的依赖文件的第一个文件
 # 第五层:
 
-TARGET := test
+# 如果没有参数给make命令，默认目标会被执行
+default_target: all
+
+.PHONY : default_target
+
+TARGET := sample2
 
 CC := gcc
 
@@ -17,37 +22,30 @@ SRCS:= $(wildcard *.c)
 
 INCS:= $(wildcard *.h)
 
+# 获取当前 Makefile 文件的完整路径
+CURRENT_MAKEFILE := $(lastword $(MAKEFILE_LIST))
+
+# 获取当前 Makefile 文件所在的目录
+INCS_PATH := -I$(dir $(CURRENT_MAKEFILE))/includes/
+
 # 把SRCS中的每个文件都由.c替换成.o
 OBJS:= $(SRCS:%.c=%.o)
 
-INC = -I/home/lieryang/Desktop/makefile-study/2.mutli-file/
-
-#=============================================================================
-# Special targets provided by cmake.
-
-# Disable implicit rules so canonical targets will work.
-.SUFFIXES:
-
-
-# Remove some rules from gmake that .SUFFIXES does not remove.
-
-
-.SUFFIXES:
-.SUFFIXES: .hpux_make_needs_suffix_list
-
+all: $(TARGET)
+	@echo "编译结束"
 
 $(TARGET):$(OBJS)
 	@echo "test" $(SUFFIXES)
 	$(CC) $^ -o $@
 # 多个文件同时编译的时候不能即用 -o 又用 -c
-%.o:%.c
-	@echo "开始编译"
+%.o:%.c main.h
+	@echo "开始编译" $<
 	@echo $(SRCS)
 	@echo $(OBJS)
-	$(CC) -c $^ -o $@ $(INC)
-	@echo "编译结束"
+	$(CC) -c $< -o $@ -I./includes
+main.h : 
+	@echo "头文件"
+
 .PHONY: clean
 clean:
 	rm -rf $(TARGET) $(OBJS)
-
-
