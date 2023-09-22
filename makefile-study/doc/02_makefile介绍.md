@@ -161,7 +161,7 @@ gcc main.o test1.o test2.o -o main
 
 而如果我们改变了 `command.h` ，那么， `kdb.o` 、 `command.o` 和 `files.o` 都会被重编译，并且， `edit` 会被重链接。
 
->重新学习Makefile过程中，让我想起了，
+>重新学习Makefile过程中，让我想起了，我以前编写的Makefile文件，修改头文件后重新make会出现问题，原因是：源文件.c ： 头文件.h 没有正确对应起来。
 
 
 
