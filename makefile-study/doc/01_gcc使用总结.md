@@ -158,5 +158,8 @@ gcc main.cpp -l stdc++
 有用到（也就是告诉链接器，那个暂时没用到的库先别扔了）
 ```
 
+## 参考
 
-[参考1：Linux下编辑、编译、调试命令总结——gcc和gdb描述](https://www.cnblogs.com/yhjoker/p/7533438.html)
+[参考1：概述](https://seisman.github.io/how-to-write-makefile/overview.html)
+
+[参考2：Linux下编辑、编译、调试命令总结——gcc和gdb描述](https://www.cnblogs.com/yhjoker/p/7533438.html)
