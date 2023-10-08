@@ -15,3 +15,32 @@
 增加，然后使用一个库
 
 ## Getting Started
+
+在这个练习中，我们将向我们的项目中添加一个库，其中包含我们自己的计算平方根的实现。可执行文件可以使用这个库而不是编译器提供的标准平方根函数。
+
+在本教程中，我们将把这个库放到一个名为MathFunctions的子目录中。该目录已经包含了头文件MathFunctions.h和mysqrt.h。它们各自的源文件MathFunctions.cxx和mysqrt.cxx也已提供。我们不需要修改这些文件中的任何一个。mysqrt.cxx有一个名为mysqrt的函数，提供了类似于编译器的sqrt函数的功能。MathFunctions.cxx包含一个名为sqrt的函数，用于隐藏sqrt的实现细节。
+
+从Help/guide/tutorial/Step2目录开始，从TODO 1开始，一直完成到TODO 6。
+
+首先，在MathFunctions子目录中填写一行CMakeLists.txt。
+
+接下来，编辑顶级CMakeLists.txt。
+
+最后，在tutorial.cxx中使用新创建的MathFunctions库。
+
+## Build and Run
+
+运行cmake可执行文件或者使用cmake-gui配置项目，然后使用你选择的构建工具构建项目。
+
+以下是在命令行中执行这些步骤的复习：
+
+```bash
+mkdir Step2_build
+cd Step2_build
+cmake ../Step2
+cmake --build .
+```
+
+尝试使用新构建的"Tutorial"，并确保它仍然能够产生准确的平方根值。
+
+## Solution
