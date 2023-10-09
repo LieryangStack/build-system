@@ -10,11 +10,11 @@
 
 一旦库被创建，就可以使用target_include_directories()和target_link_libraries()将其连接到我们的可执行目标中。
 
-## Goal
+### 1.1 Goal
 
 增加，然后使用一个库
 
-## Getting Started
+### 1.2 Getting Started
 
 在这个练习中，我们将向我们的项目中添加一个库，其中包含我们自己的计算平方根的实现。可执行文件可以使用这个库而不是编译器提供的标准平方根函数。
 
@@ -28,19 +28,4 @@
 
 最后，在tutorial.cxx中使用新创建的MathFunctions库。
 
-## Build and Run
-
-运行cmake可执行文件或者使用cmake-gui配置项目，然后使用你选择的构建工具构建项目。
-
-以下是在命令行中执行这些步骤的复习：
-
-```bash
-mkdir Step2_build
-cd Step2_build
-cmake ../Step2
-cmake --build .
-```
-
-尝试使用新构建的"Tutorial"，并确保它仍然能够产生准确的平方根值。
-
-## Solution
+### 1.3 Solution

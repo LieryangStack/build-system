@@ -1,4 +1,0 @@
-/usr/local/Demo5/bin/demo5
-/usr/local/Demo5/include/config.h
-/usr/local/Demo5/bin/libMathFunctions.a
-/usr/local/Demo5/include/MathFunctions.h
