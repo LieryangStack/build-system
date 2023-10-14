@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++11
 
 CXX_DEFINES = -DUSE_MYMATH
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/lieryang/Desktop/build-system/Step2/MathFunctions/include 
 

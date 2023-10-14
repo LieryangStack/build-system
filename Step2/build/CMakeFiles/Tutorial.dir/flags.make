@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/lieryang/Desktop/build-system/Step2/build -I/home/lieryang/Desktop/build-system/Step2/MathFunctions 
+CXX_INCLUDES = -I/home/lieryang/Desktop/build-system/Step2/build -I/home/lieryang/Desktop/build-system/Step2/MathFunctions -I/home/lieryang/Desktop/build-system/Step2/MathFunctions/include 
 

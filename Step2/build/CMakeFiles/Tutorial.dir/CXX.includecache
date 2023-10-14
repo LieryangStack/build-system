@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../MathFunctions/MathFunctions.h
+../MathFunctions/include/MathFunctions.h
 
 /home/lieryang/Desktop/build-system/Step2/tutorial.cxx
 cmath

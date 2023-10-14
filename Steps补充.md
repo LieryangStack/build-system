@@ -70,3 +70,9 @@ add_subdirectory (source_dir [binary_dir] [EXCLUDE_FROM_ALL])
   **可选参数**。当指定了该参数，则子目录下的目标不会被父目录下的目标文件包含进去，父目录的CMakeLists.txt不会构建子目录的目标文件，必须在子目录下显式去构建。例外情况：当父目录的目标依赖于子目录的目标，则子目录的目标仍然会被构建出来以满足依赖关系（例如使用了target_link_libraries）。
 
 [参考1.Cmake命令之add_subdirectory](https://blog.csdn.net/sinat_31608641/article/details/122660652)
+
+## 3 Step3
+
+### 3.1 list
+
+[参考1.cmake命令之list](https://blog.csdn.net/sinat_31608641/article/details/123101692)
