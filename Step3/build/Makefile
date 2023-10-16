@@ -127,19 +127,6 @@ Tutorial/fast:
 .PHONY : Tutorial/fast
 
 #=============================================================================
-# Target rules for targets named SqrtLibrary
-
-# Build rule for target.
-SqrtLibrary: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 SqrtLibrary
-.PHONY : SqrtLibrary
-
-# fast build rule for target.
-SqrtLibrary/fast:
-	$(MAKE) -f MathFunctions/CMakeFiles/SqrtLibrary.dir/build.make MathFunctions/CMakeFiles/SqrtLibrary.dir/build
-.PHONY : SqrtLibrary/fast
-
-#=============================================================================
 # Target rules for targets named MathFunctions
 
 # Build rule for target.
@@ -188,7 +175,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Tutorial"
 	@echo "... edit_cache"
-	@echo "... SqrtLibrary"
 	@echo "... MathFunctions"
 	@echo "... tutorial.o"
 	@echo "... tutorial.i"

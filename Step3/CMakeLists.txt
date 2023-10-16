@@ -18,7 +18,7 @@ target_compile_features(tutorial_compiler_flags INTERFACE cxx_std_11)
 # set(CMAKE_CXX_STANDARD 11)
 # set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-option(CMAKE_VERBOSE_MAKEFILE ON)
+set(CMAKE_VERBOSE_MAKEFILE ON)
 
 # configure a header file to pass some of the CMake settings
 # to the source code

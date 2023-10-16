@@ -114,21 +114,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-MathFunctions/CMakeFiles/SqrtLibrary.dir/rule:
-	cd /home/lieryang/Desktop/build-system/Step3/build && $(MAKE) -f CMakeFiles/Makefile2 MathFunctions/CMakeFiles/SqrtLibrary.dir/rule
-.PHONY : MathFunctions/CMakeFiles/SqrtLibrary.dir/rule
-
-# Convenience name for target.
-SqrtLibrary: MathFunctions/CMakeFiles/SqrtLibrary.dir/rule
-
-.PHONY : SqrtLibrary
-
-# fast build rule for target.
-SqrtLibrary/fast:
-	cd /home/lieryang/Desktop/build-system/Step3/build && $(MAKE) -f MathFunctions/CMakeFiles/SqrtLibrary.dir/build.make MathFunctions/CMakeFiles/SqrtLibrary.dir/build
-.PHONY : SqrtLibrary/fast
-
-# Convenience name for target.
 MathFunctions/CMakeFiles/MathFunctions.dir/rule:
 	cd /home/lieryang/Desktop/build-system/Step3/build && $(MAKE) -f CMakeFiles/Makefile2 MathFunctions/CMakeFiles/MathFunctions.dir/rule
 .PHONY : MathFunctions/CMakeFiles/MathFunctions.dir/rule
@@ -170,33 +155,6 @@ MathFunctions.cxx.s:
 	cd /home/lieryang/Desktop/build-system/Step3/build && $(MAKE) -f MathFunctions/CMakeFiles/MathFunctions.dir/build.make MathFunctions/CMakeFiles/MathFunctions.dir/MathFunctions.cxx.s
 .PHONY : MathFunctions.cxx.s
 
-mysqrt.o: mysqrt.cxx.o
-
-.PHONY : mysqrt.o
-
-# target to build an object file
-mysqrt.cxx.o:
-	cd /home/lieryang/Desktop/build-system/Step3/build && $(MAKE) -f MathFunctions/CMakeFiles/SqrtLibrary.dir/build.make MathFunctions/CMakeFiles/SqrtLibrary.dir/mysqrt.cxx.o
-.PHONY : mysqrt.cxx.o
-
-mysqrt.i: mysqrt.cxx.i
-
-.PHONY : mysqrt.i
-
-# target to preprocess a source file
-mysqrt.cxx.i:
-	cd /home/lieryang/Desktop/build-system/Step3/build && $(MAKE) -f MathFunctions/CMakeFiles/SqrtLibrary.dir/build.make MathFunctions/CMakeFiles/SqrtLibrary.dir/mysqrt.cxx.i
-.PHONY : mysqrt.cxx.i
-
-mysqrt.s: mysqrt.cxx.s
-
-.PHONY : mysqrt.s
-
-# target to generate assembly for a file
-mysqrt.cxx.s:
-	cd /home/lieryang/Desktop/build-system/Step3/build && $(MAKE) -f MathFunctions/CMakeFiles/SqrtLibrary.dir/build.make MathFunctions/CMakeFiles/SqrtLibrary.dir/mysqrt.cxx.s
-.PHONY : mysqrt.cxx.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -205,14 +163,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... SqrtLibrary"
 	@echo "... MathFunctions"
 	@echo "... MathFunctions.o"
 	@echo "... MathFunctions.i"
 	@echo "... MathFunctions.s"
-	@echo "... mysqrt.o"
-	@echo "... mysqrt.i"
-	@echo "... mysqrt.s"
 .PHONY : help
 
 
