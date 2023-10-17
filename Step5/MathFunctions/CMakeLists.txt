@@ -30,9 +30,12 @@ target_link_libraries(MathFunctions PUBLIC tutorial_compiler_flags)
 # Then install the installable libraries to the lib folder.
 # Hint: Use the TARGETS and DESTINATION parameters
 set(installable_libs MathFunctions tutorial_compiler_flags)
+
+# 这是一个条件语句，它检查名为`SqrtLibrary`的CMake目标(target)是否已经定义
 if(TARGET SqrtLibrary)
   list(APPEND installable_libs SqrtLibrary)
 endif()
+
 install(TARGETS ${installable_libs} DESTINATION lib)
 # TODO 2: Install the library headers to the include folder.
 # Hint: Use the FILES and DESTINATION parameters

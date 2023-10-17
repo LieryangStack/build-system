@@ -86,11 +86,74 @@ CTest提供了一种轻松管理项目测试的方式。通过add_test()命令�
 
 ### 2.1 Goal
 
+Create unit tests for our executable using CTest.
+
 ### 2.2 Getting Started
+
+起始源代码已提供在 Step5 目录中。在这个练习中，通过完成 TODO 5 到 TODO 9，首先，我们需要启用测试。接下来，开始使用 add_test() 向我们的项目添加测试。我们将逐步添加三个简单的测试，然后你可以根据需要添加额外的测试。
 
 ### 2.3 Build and Run
 
+前往构建目录并重新构建应用程序。然后运行 ctest 可执行文件：ctest -N 和 ctest -VV。对于多配置生成器（例如 Visual Studio），必须使用 `-C <mode>` 标志指定配置类型。例如，要在 Debug 模式下运行测试，请在构建目录中使用 ctest -C Debug -VV（而不是 Debug 子目录！）。Release 模式将从相同位置执行，但需要加上 -C Release。或者，可以从IDE中构建 RUN_TESTS 目标。
+
 ### 2.4 Solution
 
+让我们来测试我们的应用程序。在顶层的 CMakeLists.txt 文件末尾，首先需要使用 enable_testing() 命令启用测试。
 
+```cmake
+# TODO 5: CMakeLists.txt
+enable_testing()
+```
+
+启用测试后，我们将添加一些基本测试，以验证应用程序是否正常工作。首先，我们使用 add_test() 创建一个测试，该测试运行 Tutorial 可执行文件，参数为 25。对于这个测试，我们不会检查可执行文件的计算结果。这个测试将验证应用程序是否运行，是否没有段错误或其他崩溃，并且是否返回零值。这是 CTest 测试的基本形式。
+
+
+```cmake
+# TODO 6: CMakeLists.txt
+add_test(NAME Runs COMMAND Tutorial 25)
+```
+
+接下来，让我们使用 PASS_REGULAR_EXPRESSION 测试属性来验证测试的输出是否包含特定的字符串。在这种情况下，验证当提供了不正确数量的参数时是否打印了使用消息。
+
+```cmake
+# TODO 7: CMakeLists.txt
+add_test(NAME Usage COMMAND Tutorial)
+set_tests_properties(Usage
+  PROPERTIES PASS_REGULAR_EXPRESSION "Usage:.*number"
+  )
+```
+
+接下来添加的测试将验证计算出的值是否确实是平方根。
+
+
+```cmake
+# TODO 8: CMakeLists.txt
+add_test(NAME StandardUse COMMAND Tutorial 4)
+set_tests_properties(StandardUse
+  PROPERTIES PASS_REGULAR_EXPRESSION "4 is 2"
+  )
+```
+
+ 单一测试还不足以让我们对它对所有传入值的工作有信心。我们应该添加更多的测试来验证这一点。为了轻松添加更多的测试，我们创建一个名为 do_test 的函数，该函数运行应用程序并验证给定输入的计算平方根是否正确。对于 do_test 的每次调用，将根据传递的参数添加另一个项目的测试，包括名称、输入和预期结果。
+
+
+```cmake
+# TODO 9: CMakeLists.txt
+
+function(do_test target arg result)
+  add_test(NAME Comp${arg} COMMAND ${target} ${arg})
+  set_tests_properties(Comp${arg}
+    PROPERTIES PASS_REGULAR_EXPRESSION ${result}
+    )
+endfunction()
+
+# do a bunch of result based tests
+do_test(Tutorial 4 "4 is 2")
+do_test(Tutorial 9 "9 is 3")
+do_test(Tutorial 5 "5 is 2.236")
+do_test(Tutorial 7 "7 is 2.645")
+do_test(Tutorial 25 "25 is 5")
+do_test(Tutorial -25 "-25 is (-nan|nan|0)")
+do_test(Tutorial 0.0001 "0.0001 is 0.01")
+```
 
