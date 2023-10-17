@@ -82,8 +82,15 @@ install(FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h"
 
 ## 2 Exercise 2 - Testing Support
 
+CTest提供了一种轻松管理项目测试的方式。通过add_test()命令可以添加测试。尽管本教程没有明确介绍，但CTest与其他测试框架（如GoogleTest）之间存在很大的兼容性。
 
+### 2.1 Goal
 
+### 2.2 Getting Started
+
+### 2.3 Build and Run
+
+### 2.4 Solution
 
 
 
