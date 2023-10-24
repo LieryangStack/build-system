@@ -36,10 +36,17 @@
 
 - **CMake**：CMake是Kitware公司为了解决ITK软件跨平台构建的需求而设计出来的，后来VTK也用上了CMake。CMake是一个元构建系统工具，支持多种语言，多种Build Backend（Make，Ninjia，Visual Studio，Xcode等）。
 
+  关于CMake的相关学习笔记在目录`cmake_study`
+
 - **Meson**：Meson 是一个开源的构建系统和构建定义语言，旨在简化和加速软件项目的构建过程。它最初由 Jussi Pakkanen 创建，目前由社区维护和开发。Meson 主要用于构建 C、C++、Rust 和其他编程语言的项目，它的设计注重性能、可维护性和跨平台支持。
+
+  关于Meson的相关学习笔记在目录`meson_study`
+
 
 ## 参考
 
 [1.C++工程中常用的构建系统（Build System）](https://zhuanlan.zhihu.com/p/570846866)
 
 [2.全网最细的CMake教程！(强烈建议收藏)](https://zhuanlan.zhihu.com/p/534439206)
+
+[3.The Meson Build System](https://mesonbuild.com/Quick-guide.html#using-meson)
